@@ -25,7 +25,7 @@ namespace PokemonReviewApp.Repository
 
         public decimal GetPokemonRating(int pokeId)
         {
-            var review = _context.Reviews.Where(p => p.Pokemon.Id == pokeId).FirstOrDefault();
+            var review = _context.Reviews.Where(p => p.Pokemon.Id == pokeId);
             if(review.Count() <= 0)
             {
                 return 0;
