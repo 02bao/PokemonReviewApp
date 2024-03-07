@@ -1,0 +1,13 @@
+﻿using PokemonReviewApp.Controllers;
+
+namespace PokemonReviewApp.Interface
+{
+    public interface ICountryRepository
+    {
+        ICollection<Country> GetCountries();
+        Country GetCountry(int id);
+        Country GetCountryByOwner(int OwnerId);
+        ICollection<Owner> GetOwnersFromACountry(int countryId);
+        bool CountryExists(int id);
+    }
+}

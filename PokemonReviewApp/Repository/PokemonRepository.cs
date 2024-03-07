@@ -38,7 +38,7 @@ namespace PokemonReviewApp.Repository
             return _context.Pokemons.OrderBy(p => p.Id).ToList();
         }
 
-        public bool PokemonExist(int pokeId)
+        public bool PokemonExists(int pokeId)
         {
             return _context.Pokemons.Any(p => p.Id == pokeId);
         }
